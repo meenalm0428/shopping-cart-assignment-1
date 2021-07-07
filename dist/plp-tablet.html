@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/main.36889762.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/src.e31bb0bc.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,500;0,700;1,100;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <title>Plp-tablet</title>
+<script src="/main.36889762.js"></script></head>
+
+<body>
+    <header>
+        <nav>
+            <div class="header-row">
+                <img src="/logo.604d7662.png" alt="Sabka Bazaar logo" class="logo">
+            </div>
+        </nav>
+    </header>
+
+    <section class="content cards">
+        <nav class="sidebarnav">
+            <ul>
+                <li><a href="#">Fruits & Vegetables</a></li>
+                <li><a href="#">Bakery Cakes and Dairy</a></li>
+                <li><a href="#">Beverages</a></li>
+                <li><a href="#">Beauty & Hygeine</a></li>
+                <li><a href="#">Baby Care</a></li>
+            </ul>
+        </nav>
+
+        <article class="card" id="product-container">
+            <h3>Card 1</h3>
+            <img src="/kiwi-green.a8f574e3.jpg" alt="Kiwi" style="width:50%; float:left;">
+            <p class="description">Kiwis are oval shaped with a brownish outer skin. The flesh is bright green and juicy with</p>
+            <button class="btn-products">Buy Now @ Rs.12</button>
+        </article>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>$(document).ready(function () {
+  console.log('Inside the jquery ready function');
+  $.ajax({
+    url: "http://localhost:5000/products",
+    dataType: "json",
+    method: "GET"
+  }).done(function (data) {
+    console.log('These are the products available', data);
+    var str = '';
+    data.forEach(function (ele, idx) {
+      var img = ele.imageURL;
+      var sku = ele.sku;
+      var stock = ele.stock;
+      str += "<article class=\"card\">\n                    <h3>".concat(ele.name, "</h3>\n                    <img src=").concat(ele.img, " alt=\"").concat(ele.sku, ", ").concat(ele.stock, "\" style=\"width:50%; float:left;\" >                    \n                    <p class=\"description\">").concat(ele.description, "</p>\n                    <button class=\"btn-products\">Buy Now @ ").concat(ele.price, "</button>\n                </article>");
+    }); // $('#sidebar').html;
+
+    $('#product-container').html(str);
+  }).fail(function (err) {
+    console.log(err, 'Cannot load the products');
+  });
+});</script>
+</body>
+
+</html>

@@ -7,6 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/src.e31bb0bc.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,40 +22,82 @@
 <script src="/main.36889762.js"></script></head>
 
 <body>
-    <header>
-        <nav>
-            <div class="header-row">
-                <img src="/logo.604d7662.png" alt="Sabka Bazaar logo" class="logo">
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="/logo.604d7662.png" style="width:100px;">
             </div>
-        </nav>
-    </header>
+            <nav class="navlist">
+                <ul>
+                    <li><a href="#"> Home</a></li>
+                    <li><a href="#"> Products</a></li>
+                </ul>
+            </nav>
 
-    <section class="content cards">
+            <table class="vtable">
+                <tbody>
+                    <tr>
+                        <td class="td2"><a href="#"> SignIn</a></td>
+                        <td class="td2"><a href="#"> Register</a></td>
+                    </tr>
+                    <tr>
+                        <td><button class="cart-button" type="button">items</button></td>
+                    </tr>
+                    
+            </tbody></table>
+    </div></header>
+
+    <section class=" content cards ">
         <nav class="sidebarnav">
             <ul>
-                <li><a href="#">Fruits & Vegetables</a></li>
-                <li><a href="#">Bakery Cakes and Dairy</a></li>
-                <li><a href="#">Beverages</a></li>
-                <li><a href="#">Beauty & Hygeine</a></li>
-                <li><a href="#">Baby Care</a></li>
+                <li><a href="# ">Fruits & Vegetables</a></li>
+                <li><a href="# ">Bakery Cakes and Dairy</a></li>
+                <li><a href="# ">Beverages</a></li>
+                <li><a href="# ">Beauty & Hygeine</a></li>
+                <li><a href="# ">Baby Care</a></li>
             </ul>
         </nav>
 
-        <article class="card" id="product-container">
+        <article class="card " id="product-container ">
             <h3>Card 1</h3>
-            <img src="/kiwi-green.a8f574e3.jpg" alt="Kiwi" style="width:50%; float:left;">
-            <p class="description">Kiwis are oval shaped with a brownish outer skin. The flesh is bright green and juicy with</p>
-            <button class="btn-products">Buy Now @ Rs.12</button>
+            <img src="/kiwi-green.a8f574e3.jpg" alt="Kiwi " style="width:50%; float:left; ">
+            <p class="description ">Kiwis are oval shaped with a brownish outer skin. The flesh is bright green and juicy with</p>
+            <button class="btn-products ">Buy Now @ Rs.12</button>
         </article>
+        <!-- <h3>Card 1</h3>
+            <img src="../public/images/products/fruit-n-veg/kiwi-green.jpg " alt="Kiwi " style="width:50%; float:left; ">
+            <p class="description ">Kiwis are oval shaped with a brownish outer skin. The flesh is bright green and juicy with</p>
+            <button class="btn-products ">Buy Now @ Rs.12</button> -->
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 1</h5>
+                        <img src="/kiwi-green.a8f574e3.jpg" alt="Kiwi " style="width:50%; float:left; ">
+                        <p>Kiwis are oval shaped with a brownish outer skin. The flesh is bright green and juicy with</p>
+                        <button class="btn-products ">Buy Now @ Rs.12</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js " integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=" anonymous "></script>
     <script>$(document).ready(function () {
   console.log('Inside the jquery ready function');
   $.ajax({
-    url: "http://localhost:5000/products",
-    dataType: "json",
-    method: "GET"
+    url: "http://localhost:5000/products ",
+    dataType: "json ",
+    method: "GET "
   }).done(function (data) {
     console.log('These are the products available', data);
     var str = '';
@@ -59,7 +105,7 @@
       var img = ele.imageURL;
       var sku = ele.sku;
       var stock = ele.stock;
-      str += "<article class=\"card\">\n                    <h3>".concat(ele.name, "</h3>\n                    <img src=").concat(ele.img, " alt=\"").concat(ele.sku, ", ").concat(ele.stock, "\" style=\"width:50%; float:left;\" >                    \n                    <p class=\"description\">").concat(ele.description, "</p>\n                    <button class=\"btn-products\">Buy Now @ ").concat(ele.price, "</button>\n                </article>");
+      str += "<article class=\"card \">\n                    <h3>".concat(ele.name, "</h3>\n                    <img src=").concat(ele.img, " alt=\"").concat(ele.sku, ", ").concat(ele.stock, " \" style=\"width:50%; float:left; \" >                    \n                    <p class=\"description \">").concat(ele.description, "</p>\n                    <button class=\"btn-products \">Buy Now @ ").concat(ele.price, "</button>\n                </article>");
     }); // $('#sidebar').html;
 
     $('#product-container').html(str);

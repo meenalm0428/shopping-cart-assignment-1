@@ -54,18 +54,27 @@
                 dataType: "json",
                 method: "GET"
             }).done(function(data) {
-                console.log('These are the products available', data);
+                console.log('These are the products available', data[0].category);
                 let str = '';
                 data.forEach(function(ele, idx) {
-                    let img = ele.imageURL;
-                    let sku = ele.sku;
-                    let stock = ele.stock;
-                    str += `<article class="card">
+                    if (ele.category == "5b6899953d1a866534f516e2") {
+                        str += `<article class="card">
                     <h3>${ele.name}</h3>
-                    <img src=${ele.img} alt="${ele.sku}, ${ele.stock}" style="width:50%; float:left;" >                    
+                    <img src=${ele.img} alt="${ele.sku}, ${ele.stock}" style="width:50%; float:left;">                    
                     <p class="description">${ele.description}</p>
                     <button class="btn-products">Buy Now @ ${ele.price}</button>
                 </article>`
+                    }
+
+                    // let img = ele.imageURL;
+                    // let sku = ele.sku;
+                    // let stock = ele.stock;
+                    //     str += `<article class="card">
+                    //     <h3>${ele.name}</h3>
+                    //     <img src=${ele.img} alt="${ele.sku}, ${ele.stock}" style="width:50%; float:left;" >                    
+                    //     <p class="description">${ele.description}</p>
+                    //     <button class="btn-products">Buy Now @ ${ele.price}</button>
+                    // </article>`
                 });
                 // $('#sidebar').html;
                 $('#product-container').html(str);

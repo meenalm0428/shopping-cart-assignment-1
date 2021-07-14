@@ -6,8 +6,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start:server": "canned -p 5000 ./server",
-        "start:client": "parcel src/plp-tablet.html",
-        "start:dev": "concurrently \"parcel ./src/plp-tablet.html\" \"npm start\""
+        "start:client": "parcel src/index.html",
+        "start:dev": "concurrently \"parcel ./src/index.html\" \"npm start\""
 
     },
     "author": "Meenal Mathur",

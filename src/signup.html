@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../public/sass/main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./js/login.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,500;0,700;1,100;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <title>Plp-tablet</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="flex-container">
+            <div class="box one">
+                <h1 style="padding-bottom: 10px;">SignUp</h1>
+                <p>We do not share your personal details with anyone.</p>
+            </div>
+            <div class="box two">
+                <main id="main-holder ">
+                    <div id="login-error-msg-holder">
+                        <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+                    </div>
+
+                    <form id="login-form">
+                        <label>Email</label>
+                        <input type="text " name="username " id="username-field " class="login-form-field " placeholder="First Name ">
+                        <input type="text " name="username " id="username-field " class="login-form-field " placeholder="Last Name ">
+                        <input type="text " name="username " id="username-field " class="login-form-field " placeholder="Email ">
+                        <input type="password" name="password" id="password-field" class="login-form-field " placeholder="Password">
+                        <input type="password" name="password" id="password-field" minlength="8" class="login-form-field " placeholder="Confirm Password">
+                        <input type="submit" value="Login" id="login-form-submit">
+                    </form>
+
+                </main>
+            </div>
+        </div>
+        <footer>
+            <div class="row">
+                <p>Copyright &copy; 2011-2018 Sabka Bazaar Grocery Supplies Pvt Ltd</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+
+</html>
